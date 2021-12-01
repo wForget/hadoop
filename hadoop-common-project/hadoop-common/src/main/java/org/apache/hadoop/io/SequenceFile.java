@@ -3553,7 +3553,7 @@ public class SequenceFile {
               new Path(tmpDir, "intermediate").suffix("." + passNo);
 
             Path outputFile =  lDirAlloc.getLocalPathForWrite(
-                                                tmpFilename.toString(),
+                                                tmpFilename.toUri().getPath(),
                                                 approxOutputSize, conf);
             if(LOG.isDebugEnabled()) { 
               LOG.debug("writing intermediate results to " + outputFile);
